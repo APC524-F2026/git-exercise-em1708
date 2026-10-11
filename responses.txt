@@ -1,0 +1,6 @@
+Problem 1: 
+
+The Newton's method commit added polynomial_zeros.ipynb, but the
+subsequent cleanup commit deleted it. When the two commits 
+were combined, the addition and deletion canceled out, so the 
+notebook does not appear in hte final combined changeset. 
