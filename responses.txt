@@ -9,3 +9,7 @@ I chose to merge `orthotest` into `rational-legendre` because the orthogonality 
 **Problem 3:**
 
 Frank suggested using LaTeX's `import` package to make it easier to maintain the report in separate files. Each section could be edited independently, while the main LaTeX document combines the sections into one report with consistent formatting. This would make the report easier to organize and reduce conflicts when multiple people work on different sections.
+
+**Problem 4:**
+
+After merging the Gauss quadrature feature into `main`, 32 tests fail because the rational-Legendre changes from Part 3 use `fractions.Fraction` to represent polynomial coefficients, while the Gauss quadrature and root-finding code uses `decimal.Decimal`. These numeric types cannot be combined directly in operations such as multiplication and division, and `Fraction` does not support the `.sqrt()` method used by the existing code. The two sets of code worked independently, but merging them exposed this incompatibility between numeric types.
