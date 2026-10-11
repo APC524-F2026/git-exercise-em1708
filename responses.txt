@@ -1,0 +1,14 @@
+Problem 1: 
+
+The Newton's method commit added polynomial_zeros.ipynb, but the
+subsequent cleanup commit deleted it. When the two commits 
+were combined, the addition and deletion canceled out, so the 
+notebook does not appear in hte final combined changeset. 
+
+
+Probel 2: 
+I chose to merge orthotest into rational-legendre because the orthogonzlity 
+test provides an additional way to verify the Legendre polynomials. I kept 
+exact arithmetic comparisons in the existing tests ecause the implementation 
+uses fractions, s exact equality is appropriate. I also renamed the 
+orthogonality test file so that pytest discovers and runs it automatically. 
