@@ -1,6 +1,11 @@
-Problem 1: 
+**Problem 1:**
 
-The Newton's method commit added polynomial_zeros.ipynb, but the
-subsequent cleanup commit deleted it. When the two commits 
-were combined, the addition and deletion canceled out, so the 
-notebook does not appear in hte final combined changeset. 
+The Newton's method commit added `polynomial_zeros.ipynb`, but the subsequent cleanup commit deleted it. When the two commits were combined, the addition and deletion canceled out, so the notebook does not appear in the final combined changeset.
+
+**Problem 2:**
+
+I chose to merge `orthotest` into `rational-legendre` because the orthogonality test provides an additional way to verify the Legendre polynomials. I kept exact arithmetic comparisons in the existing tests because the implementation uses fractions, so exact equality is appropriate. I also renamed the orthogonality test file so that pytest discovers and runs it automatically.
+
+**Problem 3:**
+
+Frank suggested using LaTeX's `import` package to make it easier to maintain the report in separate files. Each section could be edited independently, while the main LaTeX document combines the sections into one report with consistent formatting. This would make the report easier to organize and reduce conflicts when multiple people work on different sections.
